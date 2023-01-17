@@ -1,3 +1,328 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background-color: #272727;
+    overflow: hidden;
+}
+
+#cookie {
+    background-color: rgb(169, 169, 169);
+    background-image: url(../images/return.png);
+    background-position-x: 15%; 
+    background-position-y: 35%; 
+    background-size: 100px auto;
+    background-repeat: no-repeat;
+}
+
+#bonusMultiplier {
+    background-color: rgb(169, 169, 169);
+    background-image: url(../images/control.png);
+    background-position-x: left; 
+    background-position-y: center; 
+    background-size: auto 60px;
+    background-repeat: no-repeat;
+    font-size: 1.15em;
+    font-family: monospace;
+    color:rgb(56, 56, 56);
+}
+
+#bonusAutoClick {
+    background-color: rgb(169, 169, 169);
+    background-image: url(../images/option.png);
+    background-position-x: left; 
+    background-position-y: center; 
+    background-size: auto 60px;
+    background-repeat: no-repeat;
+    font-size: 1.15em;
+    font-family: monospace;
+    color:rgb(56, 56, 56);
+}
+#bonusBoost {
+    background-color: rgb(169, 169, 169);
+    background-image: url(../images/command.png);
+    background-position-x: 4%; 
+    background-position-y: center; 
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+    font-size: 1.15em;
+    font-family: monospace;
+    color:rgb(56, 56, 56);
+
+}
+
+#reset {
+    background-color: rgb(169, 169, 169);
+    background-image: url(../images/back.png);
+    background-position-x: left; 
+    background-position-y: center; 
+    background-size: auto 80px;
+    background-repeat: no-repeat;
+    font-size: 1.15em;
+    font-family: monospace;
+    color:rgb(56, 56, 56);
+}
+
+.container {
+    justify-content: start;
+}
+
+.fakeButtons {
+    height: 10px;
+    width: 10px;
+    border-radius: 10%;
+    border: 1px solid #000;
+    position: relative;
+    top: 6px;
+    left: 6px;
+    background-color: #ff3b47;
+    border-color: #9d252b;
+    display: inline-block;
+}
+
+.fakeMinimize {
+    left: 11px;
+    background-color: #ffc100;
+    border-color: #9d802c;
+}
+
+.fakeZoom {
+    left: 16px;
+    background-color: #00d742;
+    border-color: #049931;
+}
+
+.fakeMenu {
+    /* width: 75vw; */
+    box-sizing: border-box;
+    /* height: 35px; */
+    background-color: rgb(169, 169, 169);
+}
+
+.fakeScreen {
+    background-color: #151515;
+    box-sizing: border-box;
+    /* width: 75vw; */
+    padding: 20px;
+    height: 70vh;
+    overflow: auto;
+    justify-content: start;
+}
+
+p {
+    position: static;
+    /* left: 20%;
+    margin-left: -8.5em; */
+    text-align: left;
+    font-size: 1.25em;
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.randomCommandText {
+    -webkit-animation: type .1s 0s steps(10, end) forwards;
+    -moz-animation: type .1s 0s steps(10, end) forwards;
+    -o-animation: type .1s 0s steps(10, end) forwards;
+    animation: type .1s 0s steps(10, end) forwards;
+}
+
+.command-blue {
+    color: #9CD9F0;
+    display: inline;
+}
+
+
+.command-green {
+    color: #CDEE69;
+    display: inline;
+}
+
+
+.command-red {
+    color: #E09690;
+    display: inline;
+}
+
+.command-white {
+    color: #fff;
+    display: inline;
+}
+
+#backSVG {
+    height: 14px;
+    width: auto;
+    display: inline;
+}
+
+.cursor {
+    -webkit-animation: blink 1s 0s infinite;
+    -moz-animation: blink 1s 0s infinite;
+    -o-animation: blink 1s 0s infinite;
+    animation: blink 1s 0s infinite;
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes type {
+    to {
+        width: 17em;
+    }
+}
+
+@-moz-keyframes type {
+    to {
+        width: 17em;
+    }
+}
+
+@-o-keyframes type {
+    to {
+        width: 17em;
+    }
+}
+
+@keyframes type {
+    to {
+        width: 17em;
+    }
+} 
+
+.border-8.py-2.pt-2.shadow.justify-items-center {
+    border-color: rgb(169,169,169);
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 380px) { 
+    .fakeScreen {
+        height: 42vh;
+    }
+    #bonusMultiplier, #bonusAutoClick, #bonusBoost, #reset {
+        height: 110px;
+        background-position-x: center; 
+        background-position-y: center; 
+    }
+    #bonusMultiplierText, #bonusAutoClickText, #bonusBoostText, #resetText {
+        display: none;
+    }
+  }
+
+@media screen and (min-width: 380px) and (max-width: 768px) { 
+    .fakeScreen {
+        height: 47vh;
+    }
+    #bonusMultiplier, #bonusAutoClick, #bonusBoost, #reset {
+        height: 110px;
+        background-position-x: center; 
+        background-position-y: center; 
+    }
+    #bonusMultiplierText, #bonusAutoClickText, #bonusBoostText, #resetText {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 900px) { 
+    .fakeScreen {
+        height: 60vh;
+    }
+    #bonusMultiplier, #bonusAutoClick, #bonusBoost, #reset {
+        background-position-x: center; 
+        background-position-y: center; 
+    }
+    #bonusMultiplierText, #bonusAutoClickText, #bonusBoostText, #resetText {
+        display: none;
+    }
+  }
