@@ -72,7 +72,7 @@ multiplier.addEventListener("click", function() {
     multiplierCost = multiplierCost * 2;
     multiplierText.innerHTML = "Multiplier x" + (multiplierCount + 1) + " [Cost: " + multiplierCost + "]";
     console.log("Multiplier x" + (multiplierCount + 1) + " purchased. Score: " + scoreNow.innerHTML.split(':')[1]);
-    totalScore.innerHTML = "Multiplier x" + (multiplierCount + 1) + " purchased. Score: " + scoreNow.innerHTML.split(':')[1]
+    totalScore.innerHTML = "Multiplier x" + (multiplierCount + 1) + " purchased."
   } else {
     // do nothing
   }
@@ -97,8 +97,8 @@ autoClicker.addEventListener("click", function() {
     autoClickerCost = autoClickerCost * 2;
     autoClickerText.innerHTML = "Auto-Clicker x" + (autoClickerCount + 1) + " [Cost: " + autoClickerCost + "]";
     clearInterval(autoClickerInterval);
-    autoClickerInterval = setInterval(addAutoClick, 1000);
-    totalScore.innerHTML = "Cookie clicked. Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) * (multiplierCount + 1)));
+    autoClickerInterval = setInterval(addAutoClick, 1000 / autoClickerCount);
+    totalScore.innerHTML = "Auto Clicker x" + (autoClickerCount + 1) + " purchased. "
   }
 });
 
