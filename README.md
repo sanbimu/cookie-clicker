@@ -1,10 +1,10 @@
 # BeCookies cookie-clicker
 
-The [BeCookies](https://sanbimu.github.io/cookie-clicker) cookie-clicker is a game created by [Edgar Pringuet](https://github.com/edgarleon93), [Mike Incourt](https://github.com/vdemike) and Nathalie Appaerts. 
+[BeCookies](https://sanbimu.github.io/cookie-clicker) is a terminal-themed cookie clicker game:
 
 ![BeCookies](/images/Screenshot.png)
 
-## Where to find our game
+## Where to find the game
 
 You can find it live here: https://sanbimu.github.io/cookie-clicker
 
