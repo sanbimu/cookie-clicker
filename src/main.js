@@ -8,7 +8,7 @@ let buttonClicked = false;
 document.getElementById("cookie").addEventListener("click", function() {
   scoreNow.innerHTML = "Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) * (multiplierCount + 1)));
   //update line of codes to show in terminal per click
-  totalScore.innerHTML = "Cookie clicked. Score: " + scoreNow.innerHTML.split(':')[1];
+  totalScore.innerHTML = "Cookie clicked. Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) * (multiplierCount + 1)));
   console.log("Cookie clicked. Score: " + scoreNow.innerHTML.split(':')[1]);
   if (!buttonClicked) {
     gameRules.remove();
@@ -97,19 +97,26 @@ autoClicker.addEventListener("click", function() {
     autoClickerCost = autoClickerCost * 2;
     autoClickerText.innerHTML = "Auto-Clicker x" + (autoClickerCount + 1) + " [Cost: " + autoClickerCost + "]";
     clearInterval(autoClickerInterval);
-    autoClickerInterval = setInterval(addAutoClick, 1000 / autoClickerCount);
-    totalScore.innerHTML = "Auto Clicker x" + (autoClickerCount + 1) + " purchased. Score: " + scoreNow.innerHTML.split(':')[1]
+    autoClickerInterval = setInterval(addAutoClick, 1000);
+    totalScore.innerHTML = "Cookie clicked. Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) * (multiplierCount + 1)));
   }
 });
 
 function addAutoClick() {
+  if (x.matches) { 
   scoreNow.innerHTML = "Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) *  autoClickerCount * (multiplierCount + 1)));
-
+  totalScore.innerHTML = "Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) *  autoClickerCount * (multiplierCount + 1)));
   for (let i = 0; i < (autoClickerCount + multiplierCount) * (bonusActive ? 2 : 1) ; i++) {
-    showRandomElement();
-  }
-
+    showRandomElement();}
+  } else {
+    scoreNow.innerHTML = "Score: " + (parseInt(scoreNow.innerHTML.split(':')[1]) + ((bonusActive ? 2 : 1) *  autoClickerCount * (multiplierCount + 1)));
+  for (let i = 0; i < (autoClickerCount + multiplierCount) * (bonusActive ? 2 : 1) ; i++) {
+  }}
 }
+
+  var x = window.matchMedia("(max-width: 780px)")
+;
+
 
 // Autoclick button end 
 
