@@ -2,7 +2,7 @@
 
 The [BeCookies](https://sanbimu.github.io/cookie-clicker) cookie-clicker is a game created by [Edgar Pringuet](https://github.com/edgarleon93), [Mike Incourt](https://github.com/vdemike) and Nathalie Appaerts. 
 
-![BeCookies](https://postimg.cc/G4tygRPF)
+![BeCookies](/images/Screenshot.png)
 
 ## Where to find our game
 
